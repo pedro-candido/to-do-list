@@ -1,7 +1,7 @@
-import { StyledButton } from "./style";
-import { ButtonProps } from "./types";
+import { ButtonHTMLAttributes } from "react";
+import { StyledButton } from "./styles";
 
-const Button = ({ children }: HTMLButtonElement) => {
+const Button = ({ children }: ButtonHTMLAttributes<HTMLButtonElement>) => {
   return <StyledButton>{children}</StyledButton>;
 };
 

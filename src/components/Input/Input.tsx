@@ -1,9 +1,14 @@
 import React from "react";
-import { InputStyled } from "./styles";
+import { InputContainer, InputStyled, LabelStyled } from "./styles";
 import { Iinput } from "./types";
 
-const Input = ({ inputType }: Iinput) => {
-  return <InputStyled type={inputType} />;
+const Input = ({ inputType, placeholder, labelText, id }: Iinput) => {
+  return (
+    <InputContainer>
+      <LabelStyled htmlFor={id}>{labelText}</LabelStyled>
+      <InputStyled type={inputType} placeholder={placeholder} id={id} />
+    </InputContainer>
+  );
 };
 
 export default Input;

@@ -1,16 +1,23 @@
 import styled from "styled-components";
 
 export const InputStyled = styled.input`
-  border: 1px solid #335ba8;
-  background-color: #f6f6f6;
+  border: 1px solid ${({ theme }) => theme.colors.primary.main.color};
+  background-color: ${({ theme }) => theme.colors.background};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  padding: 10px 10px;
+  font-size: 20px;
 `;
 
 export const LabelStyled = styled.label`
   font-weight: bold;
-  color: #335ba8;
+  color: ${({ theme }) => theme.colors.primary.main.color};
+  font-size: 24px;
+  margin-bottom: 3%;
 `;
 
 export const InputContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: left;
+  margin-bottom: 5%;
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { BoxContainer, BoxDescription, BoxTitle } from "./style";
 import { BoxProps } from "./types";
 
@@ -11,4 +11,4 @@ const Box = ({ title, description }: BoxProps) => {
   );
 };
 
-export default Box;
+export default memo(Box);

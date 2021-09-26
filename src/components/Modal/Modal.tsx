@@ -2,9 +2,13 @@ import { Button } from "../Button";
 import { Input } from "../Input";
 import { ButtonContainer, Container } from "./styles";
 
-const Modal = () => {
+type ModalProps = {
+  isVisible?: boolean;
+};
+
+const Modal = ({ isVisible }: ModalProps) => {
   return (
-    <Container>
+    <Container style={!isVisible ? { display: "none" } : { display: "block" }}>
       <Input
         id={"task"}
         inputType={"text"}

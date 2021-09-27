@@ -1,7 +1,7 @@
 import Social from "./Social";
 import { FooterStyled, Icons } from "./style";
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <FooterStyled>
       <Icons>

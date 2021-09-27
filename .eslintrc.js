@@ -9,8 +9,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
-    '@react-native-community',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@next/next/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -40,10 +40,8 @@ module.exports = {
     'react/no-direct-mutation-state': ['error'],
     'react/prefer-es6-class': ['error', 'always'],
     'react/prop-types': ['error', { ignore: ['children'] }],
-    'react/react-in-jsx-scope': ['error'],
     'react/require-render-return': ['error'],
     curly: ['warn', 'multi'],
-    'no-only-tests/no-only-tests': 'error',
     '@typescript-eslint/ban-types': 1,
     '@typescript-eslint/no-explicit-any': 1,
     '@typescript-eslint/no-empty-function': 1,
@@ -54,5 +52,6 @@ module.exports = {
     'react/jsx-key': 1,
     'react-hooks/exhaustive-deps': 0,
     'no-prototype-builtins': 1,
+    'react/react-in-jsx-scope': 0
   },
 };

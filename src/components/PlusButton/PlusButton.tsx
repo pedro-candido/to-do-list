@@ -1,6 +1,6 @@
 import { ButtonStyled } from "./style";
 
-const PlusButton = () => {
+const PlusButton = (): JSX.Element => {
   return <ButtonStyled>+</ButtonStyled>;
 };
 

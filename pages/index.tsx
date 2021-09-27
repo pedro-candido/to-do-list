@@ -4,7 +4,19 @@ import { ThemeProvider } from "styled-components";
 import theme from "theme";
 import { Modal, Footer, PlusButton } from "components";
 import { GlobalStyle } from "theme/GlobalStyle";
-import { Container, Tasks } from "./style";
+import styled from "styled-components";
+
+const Container = styled.main`
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const Tasks = styled.aside`
+  padding: 10px;
+`;
 
 const Home: NextPage = () => {
   return (

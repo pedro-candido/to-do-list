@@ -17,9 +17,9 @@ const links: { [key: string]: any } = {
   instagram: "https://www.instagram.com/_pedrocandidof/",
 };
 
-const Social = ({ socialMedia }: SocialProps) => {
+const Social = ({ socialMedia }: SocialProps): JSX.Element => {
   return (
-    <a href={links[socialMedia]} target="_blank">
+    <a href={links[socialMedia]} target="_blank" rel="noreferrer">
       <Icon>{icons[socialMedia]}</Icon>
     </a>
   );

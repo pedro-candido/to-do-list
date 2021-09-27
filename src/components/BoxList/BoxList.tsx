@@ -1,6 +1,6 @@
 import { Box } from "components";
 
-const BoxList = () => {
+const BoxList = (): JSX.Element => {
   const listArr = [
     {
       title: "Task 1",
@@ -19,7 +19,11 @@ const BoxList = () => {
   return (
     <div>
       {listArr.map((task) => (
-        <Box title={task.title} description={task.description} />
+        <Box
+          key={task.title}
+          title={task.title}
+          description={task.description}
+        />
       ))}
     </div>
   );

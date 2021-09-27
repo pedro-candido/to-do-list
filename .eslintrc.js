@@ -9,7 +9,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
-    '@react-native-community',
     'plugin:@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',

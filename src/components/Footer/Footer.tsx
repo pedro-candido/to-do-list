@@ -1,12 +1,16 @@
 import Social from "./Social";
+import { FooterStyled, Icons } from "./style";
 
 const Footer = () => {
   return (
-    <>
-      <Social social={"instagram"} />
-      <Social social={"github"} />
-      <Social social={"linkedin"} />
-    </>
+    <FooterStyled>
+      <Icons>
+        <Social socialMedia={"instagram"} />
+        <Social socialMedia={"github"} />
+        <Social socialMedia={"linkedin"} />
+      </Icons>
+      <h2>{"<pedro-candido />"}</h2>
+    </FooterStyled>
   );
 };
 

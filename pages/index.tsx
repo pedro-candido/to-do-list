@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import theme from "theme";
-import { Modal } from "components";
+import { Modal, Footer, PlusButton } from "components";
 import { GlobalStyle } from "theme/GlobalStyle";
 
 const Home: NextPage = () => {
@@ -20,6 +20,8 @@ const Home: NextPage = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Modal isVisible />
+        <PlusButton />
+        <Footer />
       </ThemeProvider>
     </div>
   );

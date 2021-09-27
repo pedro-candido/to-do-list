@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'prettier',
     'eslint:recommended',
+    'plugin:prettier/recommended',
     'plugin:react/recommended',
     '@react-native-community',
     'plugin:@typescript-eslint/recommended',

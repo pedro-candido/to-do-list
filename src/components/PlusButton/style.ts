@@ -14,6 +14,9 @@ export const ButtonStyled = styled.button`
   top: 2%;
   right: 2%;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: ${({ theme }) =>

@@ -1,23 +1,28 @@
 import { FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi";
+import { Icon } from "./style";
 
 type SocialProps = {
-  social: string;
+  socialMedia: string;
 };
 
-type IconsProps = {
-  github: JSX.Element | string;
-  linkedin: JSX.Element | string;
-  instagram: JSX.Element | string;
+const icons: { [key: string]: any } = {
+  github: <FiGithub />,
+  linkedin: <FiLinkedin />,
+  instagram: <FiInstagram />,
 };
 
-const Social = ({ social }: SocialProps) => {
-  const icons: { [key: string]: any } = {
-    github: <FiGithub />,
-    linkedin: <FiLinkedin />,
-    instagram: <FiInstagram />,
-  };
+const links: { [key: string]: any } = {
+  github: "https://github.com/pedro-candido",
+  linkedin: "https://www.linkedin.com/in/pedro-candido/",
+  instagram: "https://www.instagram.com/_pedrocandidof/",
+};
 
-  return <div>{icons[social]}</div>;
+const Social = ({ socialMedia }: SocialProps) => {
+  return (
+    <a href={links[socialMedia]} target="_blank">
+      <Icon>{icons[socialMedia]}</Icon>
+    </a>
+  );
 };
 
 export default Social;

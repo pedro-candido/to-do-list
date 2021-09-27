@@ -5,13 +5,13 @@ type SocialProps = {
   socialMedia: string;
 };
 
-const icons: { [key: string]: any } = {
+const icons: { [key: string]: JSX.Element } = {
   github: <FiGithub />,
   linkedin: <FiLinkedin />,
   instagram: <FiInstagram />,
 };
 
-const links: { [key: string]: any } = {
+const links: { [key: string]: string } = {
   github: "https://github.com/pedro-candido",
   linkedin: "https://www.linkedin.com/in/pedro-candido/",
   instagram: "https://www.instagram.com/_pedrocandidof/",

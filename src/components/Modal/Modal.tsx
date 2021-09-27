@@ -6,7 +6,7 @@ type ModalProps = {
   isVisible?: boolean;
 };
 
-const Modal = ({ isVisible }: ModalProps) => {
+const Modal = ({ isVisible }: ModalProps): JSX.Element => {
   return (
     <Container style={!isVisible ? { display: "none" } : { display: "block" }}>
       <Input

@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { BoxContainer, BoxDescription, BoxTitle } from "./style";
 import { BoxProps } from "./types";
 
-const Box = ({ title, description }: BoxProps) => {
+const Box = ({ title, description }: BoxProps): JSX.Element => {
   return (
     <BoxContainer>
       <BoxTitle>{title}</BoxTitle>

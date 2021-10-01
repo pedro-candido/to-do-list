@@ -14,7 +14,7 @@ export const colors = {
 const theme: DefaultTheme = {
   colors,
   borderRadius: "5px",
-  fontFamily: "'Roboto Condensed'",
+  fontFamily: "Roboto Condensed",
 };
 
 export default theme;

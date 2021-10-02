@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { closeModal } from "redux/reducers/modal/modal.reducer";
 import { selectIsOpen } from "redux/reducers/modal/selectors";
-import { selectTaskName } from "redux/reducers/tasks/selectors";
 import { createTask } from "redux/reducers/tasks/tasks.reducer";
 import { Button } from "../Button";
 import { Input } from "../Input";
@@ -11,7 +10,6 @@ import { ButtonContainer, Container, ModalContent } from "./styles";
 const Modal = (): JSX.Element => {
   const dispatch = useDispatch();
   const isOpen = selectIsOpen();
-  const task = selectTaskName();
 
   const [taskName, setTaskName] = useState("");
   const [taskDescription, setTaskDescription] = useState("");

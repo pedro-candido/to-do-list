@@ -5,7 +5,6 @@ import theme from "theme";
 import { Modal, Footer, PlusButton } from "components";
 import { GlobalStyle } from "theme/GlobalStyle";
 import styled from "styled-components";
-import { selectIsOpen } from "redux/reducers/modal/selectors";
 import { useDispatch } from "react-redux";
 import { openModal } from "redux/reducers/modal/modal.reducer";
 

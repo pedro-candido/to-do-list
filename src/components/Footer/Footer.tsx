@@ -3,7 +3,6 @@ import { FooterStyled, Icons } from "./style";
 
 const Footer = (): JSX.Element => {
   const socials = ["instagram", "github", "linkedin"];
-
   return (
     <FooterStyled>
       <Icons>

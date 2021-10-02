@@ -1,30 +1,39 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { TasksProps } from "./types";
 
-type stateProps = {
-  taskName: string;
-  taskDescription: string;
-  isDone: boolean;
-};
-
-const initialState: stateProps = {
-  taskName: "",
-  taskDescription: "",
-  isDone: false,
-};
+const initialState: Array<TasksProps> = [];
 
 const slice = createSlice({
   initialState,
   name: "tasks",
   reducers: {
-    closeTask(state) {
-      state.isDone = true;
+    closeTask(state: Array<TasksProps>, { payload }) {
+      const newValue = state.filter((item) => {
+        item.taskName === payload.taskName;
+      });
+
+      return {
+        ...state,
+        newValue,
+      };
     },
     createTask(state, { payload }) {
-      state.taskName = payload.taskName;
-      state.taskDescription = payload.taskDescription;
+      const newObj: TasksProps = {
+        isDone: false,
+        taskDescription: payload.taskDescription,
+        taskName: payload.taskName,
+      };
+
+      return {
+        ...state,
+        newObj,
+      };
     },
     openTask(state) {
-      state.isDone = false;
+      return {
+        ...state,
+        isDone: true,
+      };
     },
   },
 });

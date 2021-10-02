@@ -3,8 +3,9 @@ import { StyledButton } from "./styles";
 
 const Button = ({
   children,
+  ...rest
 }: ButtonHTMLAttributes<HTMLButtonElement>): JSX.Element => {
-  return <StyledButton>{children}</StyledButton>;
+  return <StyledButton {...rest}>{children}</StyledButton>;
 };
 
 export default Button;

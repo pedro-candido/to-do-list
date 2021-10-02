@@ -3,15 +3,21 @@ import { InputContainer, InputStyled, LabelStyled } from "./styles";
 import { Iinput } from "./types";
 
 const Input = ({
-  inputType,
   placeholder,
   labelText,
   id,
+  onChange,
+  value,
 }: Iinput): JSX.Element => {
   return (
     <InputContainer>
       <LabelStyled htmlFor={id}>{labelText}</LabelStyled>
-      <InputStyled type={inputType} placeholder={placeholder} id={id} />
+      <InputStyled
+        placeholder={placeholder}
+        id={id}
+        onChange={onChange}
+        value={value ? value : ""}
+      />
     </InputContainer>
   );
 };

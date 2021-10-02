@@ -13,11 +13,12 @@ export const ButtonStyled = styled.button`
   border: 0px;
   top: 2%;
   right: 2%;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 1;
 
   &:hover {
     background-color: ${({ theme }) =>

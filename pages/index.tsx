@@ -5,6 +5,9 @@ import theme from "theme";
 import { Modal, Footer, PlusButton } from "components";
 import { GlobalStyle } from "theme/GlobalStyle";
 import styled from "styled-components";
+import { selectIsOpen } from "redux/reducers/modal/selectors";
+import { useDispatch } from "react-redux";
+import { openModal } from "redux/reducers/modal/modal.reducer";
 
 const Container = styled.main`
   flex: 1;
@@ -19,6 +22,12 @@ const Tasks = styled.aside`
 `;
 
 const Home: NextPage = () => {
+  const dispatch = useDispatch();
+
+  const openingModal = () => {
+    dispatch(openModal());
+  };
+
   return (
     <Container>
       <Head>
@@ -36,7 +45,7 @@ const Home: NextPage = () => {
         <Tasks>
           <h1>Opa, parece que não há tarefas criadas</h1>
         </Tasks>
-        <PlusButton />
+        <PlusButton onClick={openingModal} />
         <Footer />
       </ThemeProvider>
     </Container>

@@ -9,7 +9,7 @@ const slice = createSlice({
   reducers: {
     closeTask(state: Array<TasksProps>, { payload }) {
       const newValue = state.filter((item) => {
-        item.taskName === payload.taskName;
+        item.name === payload.name;
       });
 
       return {
@@ -18,16 +18,15 @@ const slice = createSlice({
       };
     },
     createTask(state, { payload }) {
-      const newObj: TasksProps = {
+      const newTask = {
+        name: payload.name,
+        description: payload.description,
         isDone: false,
-        taskDescription: payload.taskDescription,
-        taskName: payload.taskName,
       };
 
-      return {
-        ...state,
-        newObj,
-      };
+      const tasks = [...state, newTask];
+
+      return tasks;
     },
     openTask(state) {
       return {

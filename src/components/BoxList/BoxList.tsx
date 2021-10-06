@@ -1,31 +1,33 @@
 import { Box } from "components";
+import { BoxContainer } from "./style";
+import { useSelector } from "react-redux";
+import State from "redux/store/IStore";
 
-const BoxList = (): JSX.Element => {
-  const listArr = [
-    {
-      title: "Task 1",
-      description: "Description 1",
-    },
-    {
-      title: "Task 2",
-      description: "Description 2",
-    },
-    {
-      title: "Task 3",
-      description: "Description 3",
-    },
-  ];
+const Tasks = () => {
+  const tasks = useSelector(({ tasks }: State) => tasks);
 
   return (
-    <div>
-      {listArr.map((task) => (
-        <Box
-          key={task.title}
-          title={task.title}
-          description={task.description}
-        />
-      ))}
-    </div>
+    <>
+      {tasks.length !== 0 ? (
+        tasks.map((task) => (
+          <Box
+            key={task.name}
+            title={task.name}
+            description={task.description}
+          />
+        ))
+      ) : (
+        <h1> Opa, parece que você não tem tasks </h1>
+      )}
+    </>
+  );
+};
+
+const BoxList = (): JSX.Element => {
+  return (
+    <BoxContainer>
+      <Tasks />
+    </BoxContainer>
   );
 };
 

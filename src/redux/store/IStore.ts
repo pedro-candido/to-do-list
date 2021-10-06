@@ -3,7 +3,7 @@ import { TasksProps } from "redux/reducers/tasks/types";
 
 interface State {
   modal: ModalProps;
-  tasks: TasksProps;
+  tasks: TasksProps[];
 }
 
 export default State;

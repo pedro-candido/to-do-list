@@ -1,11 +1,7 @@
-import { useSelector } from "react-redux";
-import State from "redux/store/IStore";
+// import { useSelector } from "react-redux";
+// import State from "redux/store/IStore";
+// import { TasksProps } from "./types";
 
-export const selectTaskName = (): string =>
-  useSelector((state: State) => state.tasks.taskName);
-
-export const selectTaskDescription = (): string =>
-  useSelector((state: State) => state.tasks.taskDescription);
-
-export const selectIsDone = (): boolean =>
-  useSelector((state: State) => state.tasks.isDone);
+/* export const selectTask = (): TasksProps =>
+  useSelector((state: State) => state.tasks);
+*/

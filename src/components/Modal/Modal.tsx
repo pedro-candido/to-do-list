@@ -11,13 +11,14 @@ const Modal = (): JSX.Element => {
   const dispatch = useDispatch();
   const isOpen = selectIsOpen();
 
-  const [taskName, setTaskName] = useState("");
-  const [taskDescription, setTaskDescription] = useState("");
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
 
   const handleCloseModal = () => dispatch(closeModal());
 
   const handleAddTask = () => {
-    dispatch(createTask({ taskName, taskDescription }));
+    dispatch(createTask({ name, description }));
+    handleCloseModal();
   };
 
   return (
@@ -38,16 +39,16 @@ const Modal = (): JSX.Element => {
           type={"text"}
           labelText={"Digite o nome da tarefa"}
           placeholder={"Ex .: To do List"}
-          value={taskName}
-          onChange={(event) => setTaskName(event.currentTarget.value)}
+          value={name}
+          onChange={(event) => setName(event.currentTarget.value)}
         />
         <Input
           id={"description"}
           type={"text"}
           labelText={"Digite a descrição da tarefa(Opcional)"}
           placeholder={"Digite aqui as atividades"}
-          value={taskDescription}
-          onChange={(event) => setTaskDescription(event.currentTarget.value)}
+          value={description}
+          onChange={(event) => setDescription(event.currentTarget.value)}
         />
         <ButtonContainer>
           <Button onClick={() => handleAddTask()}>Adicionar</Button>

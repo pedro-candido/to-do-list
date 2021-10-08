@@ -11,8 +11,15 @@ export const colors = {
   },
 };
 
+export const fonts = {
+  title: "1.3rem",
+  description: "0.9rem",
+  inputText: "1.2rem",
+};
+
 const theme: DefaultTheme = {
   colors,
+  fonts,
   borderRadius: "5px",
   fontFamily: "Roboto Condensed",
 };

@@ -4,14 +4,14 @@ export const InputStyled = styled.input`
   border: 1px solid ${({ theme }) => theme.colors.primary.main.color};
   background-color: ${({ theme }) => theme.colors.background};
   border-radius: ${({ theme }) => theme.borderRadius};
+  font-size: ${({ theme }) => theme.fonts.inputText};
   padding: 10px;
-  font-size: 20px;
 `;
 
 export const LabelStyled = styled.label`
   color: ${({ theme }) => theme.colors.primary.main.color};
   font-weight: bold;
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.fonts.inputText};
   margin-bottom: 3%;
 `;
 

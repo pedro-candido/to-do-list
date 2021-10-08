@@ -14,6 +14,11 @@ declare module "styled-components" {
         };
       };
     };
+    fonts: {
+      title: string;
+      description: string;
+      inputText: string;
+    };
     fontFamily: string;
     borderRadius: string;
   }

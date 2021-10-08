@@ -14,7 +14,11 @@ const Modal = (): JSX.Element => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleCloseModal = () => dispatch(closeModal());
+  const handleCloseModal = () => {
+    dispatch(closeModal());
+    setName("");
+    setDescription("");
+  };
 
   const handleAddTask = () => {
     dispatch(createTask({ name, description }));
@@ -27,7 +31,7 @@ const Modal = (): JSX.Element => {
       style={!isOpen ? { display: "none" } : { display: "block" }}
     >
       <ModalContent
-        onClick={(e) => e.stopPropagation()}
+        onClick={(event) => event.stopPropagation()}
         style={
           !isOpen
             ? { opacity: 0, transition: "all 5s" }
